@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IMAX — Caliph & Tomo</title>
+  <meta name="description" content="Listen to IMAX by Caliph & Tomo on your favorite platform." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <!-- background vibe -->
+    <div class="bg" aria-hidden="true"></div>
+
+    <section class="card" aria-label="IMAX release links">
+      <header class="top">
+        <div class="art-wrap">
+          <img class="art" src="img/imaxcover.png" alt="IMAX cover art — Caliph & Tomo" />
+          <div class="shine" aria-hidden="true"></div>
+          <div class="grain" aria-hidden="true"></div>
+        </div>
+
+        <div class="meta">
+          <div class="kicker">NEW SINGLE</div>
+          <h1 class="title">IMAX</h1>
+          <p class="artist">Caliph &amp; Tomo</p>
+
+          <div class="badges" aria-label="Tags">
+            <span class="badge">Dark</span>
+            <span class="badge">Gritty</span>
+            <span class="badge">Loud</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <nav class="links" aria-label="Streaming links">
+        <a class="btn apple" href="https://music.apple.com/us/album/imax-single/1872694127" target="_blank" rel="noopener noreferrer">
+          <span class="btn-left">
+            <span class="dot"></span>
+            <span class="label">Apple Music</span>
+          </span>
+          <span class="chev" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="btn tidal" href="https://tidal.com/album/493725522/track/493725523" target="_blank" rel="noopener noreferrer">
+          <span class="btn-left">
+            <span class="dot"></span>
+            <span class="label">TIDAL</span>
+          </span>
+          <span class="chev" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="btn yt" href="https://music.youtube.com/watch?v=D6sPK3edONc" target="_blank" rel="noopener noreferrer">
+          <span class="btn-left">
+            <span class="dot"></span>
+            <span class="label">YouTube Music</span>
+          </span>
+          <span class="chev" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="btn amz" href="https://www.amazon.com/music/player/albums/B0GK4VK9GH" target="_blank" rel="noopener noreferrer">
+          <span class="btn-left">
+            <span class="dot"></span>
+            <span class="label">Amazon Music</span>
+          </span>
+          <span class="chev" aria-hidden="true">↗</span>
+        </a>
+
+        <!--
+          When Spotify is available, just uncomment and paste your link:
+
+          <a class="btn spotify" href="SPOTIFY_LINK_HERE" target="_blank" rel="noopener noreferrer">
+            <span class="btn-left">
+              <span class="dot"></span>
+              <span class="label">Spotify</span>
+            </span>
+            <span class="chev" aria-hidden="true">↗</span>
+          </a>
+        -->
+      </nav>
+
+      <footer class="footer">
+        <div class="footer-left">
+          <span class="pulse" aria-hidden="true"></span>
+          <span class="footer-text">Pick your platform • Run it up</span>
+        </div>
+
+        <button class="copy" type="button" id="copyBtn" aria-label="Copy this page link">
+          Copy page link
+        </button>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Copies current page URL (useful once hosted)
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => (copyBtn.textContent = "Copy page link"), 1400);
+      } catch (e) {
+        copyBtn.textContent = "Copy failed";
+        setTimeout(() => (copyBtn.textContent = "Copy page link"), 1400);
+      }
+    });
+  </script>
+</body>
+</html>
