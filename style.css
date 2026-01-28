@@ -291,6 +291,8 @@ body{
 .yt{ box-shadow: inset 0 0 0 1px rgba(255,80,80,0.08); }
 .amz{ box-shadow: inset 0 0 0 1px rgba(120,165,255,0.08); }
 .spotify{ box-shadow: inset 0 0 0 1px rgba(70,255,150,0.10); }
+.ig{ box-shadow: inset 0 0 0 1px rgba(255,100,180,0.12); }
+
 
 /* INSTAGRAM EMBED AREA */
 .ig{
